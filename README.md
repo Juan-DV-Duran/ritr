@@ -1,2 +1,0 @@
-# ritr
-Created with CodeSandbox
