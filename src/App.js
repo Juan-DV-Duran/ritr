@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import "./Dashboard.js";
+import { GalacticRimMap } from "./GalacticRimMap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -15,23 +15,31 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link to="/safetyofficer" className="whiteLink">
-                Safety Officer
+              <Link to="/rimmap" className="whiteLink">
+                Galactic Rim Map
               </Link>
             </li>
             <li>
-              <Link to="/employee" className="whiteLink">
-                Employee
+              <Link to="/tables" className="whiteLink">
+                Tables
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="whiteLink">
+                About
               </Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/safetyofficer">
-            <About />
+          <Route path="/rimmap">
+            <GalacticRimMap />
           </Route>
-          <Route path="/employee">
+          <Route path="/tables">
+            <About id={3} />
+          </Route>
+          <Route path="/about">
             <About id={3} />
           </Route>
           <Route path="/">
