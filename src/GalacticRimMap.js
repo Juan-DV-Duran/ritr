@@ -1,6 +1,5 @@
 import React from "react";
-import mapImage from "./map/ritrmap.png";
-import "./GalacticRimMap.css";
+import "./styling/GalacticRimMap.css";
 class GalacticRimMap extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,34 @@ class GalacticRimMap extends React.Component {
     return (
       <>
         <h2>The Galactic Rim</h2>
-        <img src={mapImage} alt="Map of the Rim" className="mapRim" />
+
+        <svg width="500" height="750">
+          <a href="#">
+            <polygon
+              points="0 0 275 0 250 35 230 50 50 150 25 80 0 40"
+              fill="#FCF3CF"
+            />
+            <text
+              x="80"
+              y="50"
+              fill="#FFFFFF"
+              text-anchor="middle"
+              alignment-baseline="middle"
+            >
+              Sector 1
+            </text>
+          </a>
+
+          <polygon
+            points="275 0 500 0 500 140 50 150 230 50 250 35"
+            fill="#D7BDE2"
+          />
+
+          <polygon
+            points="500 140 50 150 125 325 360 305 460 290 500 340"
+            fill="#D98880"
+          />
+        </svg>
       </>
     );
   }

@@ -1,6 +1,8 @@
 import React from "react";
-import "./styles.css";
+import "./styling/App.css";
 import { GalacticRimMap } from "./GalacticRimMap";
+import { Tables } from "./Tables";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -37,13 +39,13 @@ function App() {
             <GalacticRimMap />
           </Route>
           <Route path="/tables">
-            <About id={3} />
+            <Tables />
           </Route>
           <Route path="/about">
             <About id={3} />
           </Route>
           <Route path="/">
-            <About />
+            <h1> Howdy! </h1>
           </Route>
         </Switch>
       </div>
